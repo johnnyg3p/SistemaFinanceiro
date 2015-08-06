@@ -13,10 +13,10 @@
 	<h1>cadastro de Curriculo</h1>
 
 	<h:form>
-	
+
 		<h:graphicImage value="resources/img/reload.png" />
-		<br/>
-		<br/>
+		<br />
+		<br />
 
 		<h:outputText
 			value="Cadastro de Curriculo para vaga = #{cadastroCurriculoBean.vaga}"
@@ -30,19 +30,28 @@
 		<br />
 		<br />
 		
+		<h:selectOneRadio id="sexo" value="#{cadastroCurriculoBean.sexo}" layout="pageDirection">
+			<f:selectItem itemValue="Masculino" itemLabel="Masculino" />
+			<f:selectItem itemValue="Masculino" itemLabel="Feminino"/>
+		</h:selectOneRadio>
+		<br />
+		<h:outputLabel value="#{cadastroCurriculoBean.sexo}" rendered="#{not empty cadastroCurriculoBean.sexo}"  style="color:blue"/>
+		<br />
+
 		<h:outputLabel value="E-mail " for="email" />
-		<br/>
-		<h:inputText id="email" size = "60"/>
-		<br/>
+		<br />		
+		<h:inputText id="email" size="60" />
+		<br />
 		<h:outputLabel value="Senha " for="senha" />
-		<br/>
+		<br />
 		<h:inputSecret size="60" id="senha" />
-		<br/>
+		<br />
 		<h:outputLabel value="Qualificações " for="qualificacoes" />
-		<br/>
-		<h:inputTextarea cols="60" rows="5" id="qualificacoes"/>
-		<br/><br/>
-		
+		<br />
+		<h:inputTextarea cols="60" rows="5" id="qualificacoes" />
+		<br />
+		<br />
+
 		<h:commandButton value="cadastrar" />
 
 

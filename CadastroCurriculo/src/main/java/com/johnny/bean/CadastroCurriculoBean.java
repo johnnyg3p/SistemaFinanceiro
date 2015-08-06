@@ -7,6 +7,7 @@ import javax.faces.bean.ManagedBean;
 public class CadastroCurriculoBean {
 	private String vaga = "A0382D";
 	private String cargo = "Programador Java Senior";
+	private String sexo ;
 	
 	public String getVaga() {
 		return vaga;
@@ -19,6 +20,12 @@ public class CadastroCurriculoBean {
 	}
 	public void setCargo(String cargo) {
 		this.cargo = cargo;
+	}
+	public String getSexo() {
+		return sexo;
+	}
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
 	}
 	
 	
