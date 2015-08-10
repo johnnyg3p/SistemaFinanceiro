@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Novo Lançamento</title>
+	<h:outputStylesheet library="css" name="sistema.css" />
+</h:head>
+<h:body>
+
+	<h1>Novo Lançamento</h1>
+
+	<h:form id="frm">
+		<h:button outcome="CadastroLancamento" value="Novo" />
+		<h:button outcome="ConsultaLancamento" value="Consulta" />
+		<h:messages showDetail="false" showSummary="true" 
+		styleClass="form-messages" errorClass="error" infoClass="info"/>
+
+		<h:panelGrid columns="2" styleClass="form-grid"
+			columnClasses="label, campo">
+
+			<h:outputLabel value="Tipo" />
+			<h:selectOneRadio>
+				<f:selectItem itemLabel="Receita" />
+				<f:selectItem itemLabel="Despesa" />
+			</h:selectOneRadio>
+
+			<h:outputLabel value="Pessoa" />
+			<h:selectOneMenu value="Pessoa">
+				<f:selectItem itemLabel="1" />
+				<f:selectItem itemLabel="2" />
+			</h:selectOneMenu>
+
+			<h:outputLabel value="Descrição" />
+			<h:inputText />
+
+			<h:outputLabel value="Valor" />
+			<h:inputText />
+
+			<h:outputLabel value="Data Vencimento" />
+			<h:inputText />
+
+			<h:selectBooleanCheckbox value="false" label="Conta Paga" />
+			<h:outputLabel value="Conta Paga" />
+
+			<h:outputLabel value="Data Pagamento" />
+			<h:inputText />
+
+			<h:outputLabel />
+			<h:commandButton value="Cadastar" />
+
+		</h:panelGrid>
+
+	</h:form>
+
+
+</h:body>
+</html>

@@ -1,0 +1,22 @@
+td.nome{
+	width:300px;
+	text-align: center
+}
+td.tipo{
+	width:300px;
+	text-align: center
+}
+td.descricao{
+	width:300px;
+	text-align: center
+}
+td.data{
+	width:200px;
+	text-align: center
+}
+.grid .feriado{
+	color: red;
+}
+.grid .facultativo{
+	color: blue;
+}
